@@ -1,0 +1,330 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kousalya | Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Navigation -->
+    <header>
+        <nav>
+            <h2 class="logo">Kousalya&nbsp;&nbsp;Venkata Sai Lakshmi</h2>
+
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#resume">Resume</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Home Section -->
+    <section id="home" class="hero">
+        <div class="hero-text">
+            <p class="welcome">WELCOME TO MY PORTFOLIO</p>
+
+            <h1>Hi, I'm <span>Kousalya</span></h1>
+            <h2>Aspiring Software Developer</h2>
+
+            <p>
+                I am a B.Tech student specializing in Artificial Intelligence
+                and Machine Learning. I enjoy programming, web development,
+                and creating innovative projects.
+            </p>
+
+            <a href="#projects" class="btn">View Projects</a>
+            <a href="#contact" class="btn btn-outline">Contact Me</a>
+        </div>
+
+        <!-- Profile Photo Upload -->
+        <div class="profile">
+            <div class="photo-frame">
+                <img id="profilePhoto" alt="Profile Photo"
+                     style="display:none;">
+
+                <div id="photoPlaceholder">
+                    <span>👤</span>
+                    <p>Your Profile Photo</p>
+                </div>
+            </div>
+
+            <label for="photoUpload" class="btn upload-btn">
+                Upload Photo
+            </label>
+
+            <input type="file" id="photoUpload"
+                   accept="image/*" hidden>
+
+            <p id="photoMessage" class="message"></p>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <h2 class="heading">About <span>Me</span></h2>
+
+        <div class="about-card">
+            <p>
+                I am pursuing B.Tech in Artificial Intelligence and Machine
+                Learning at Vignan University. I am interested in software
+                development, machine learning, and web technologies.
+                I enjoy learning new skills, solving problems, and working
+                on projects that solve real-world problems.
+            </p>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="light-section">
+        <h2 class="heading">My <span>Skills</span></h2>
+
+        <div class="skills-container">
+            <div class="skill">Python</div>
+            <div class="skill">SQL</div>
+            <div class="skill">HTML</div>
+            <div class="skill">CSS</div>
+            <div class="skill">JavaScript</div>
+            <div class="skill">React.js</div>
+            <div class="skill">Flask</div>
+            <div class="skill">Machine Learning</div>
+            <div class="skill">Deep Learning</div>
+            <div class="skill">GitHub</div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects">
+        <h2 class="heading">My <span>Projects</span></h2>
+
+        <div class="projects-container">
+
+            <div class="project-card">
+                <div class="project-icon">⚽</div>
+                <h3>KinetIQ Coach Command</h3>
+                <p>
+                    An AI-based sports injury detection system that analyzes
+                    body posture and movement to identify potential injury risks.
+                </p>
+                <div class="tech">
+                    Python | OpenCV | MediaPipe | Flask
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-icon">🤖</div>
+                <h3>AI Course Advisor</h3>
+                <p>
+                    A RAG-based application that answers curriculum questions
+                    using information extracted from educational documents.
+                </p>
+                <div class="tech">
+                    Python | RAG | FAISS | Streamlit
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-icon">🌱</div>
+                <h3>Crop Recommendation System</h3>
+                <p>
+                    A machine learning application that recommends suitable
+                    crops based on soil and weather conditions.
+                </p>
+                <div class="tech">
+                    Python | Machine Learning | Streamlit
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-icon">🔍</div>
+                <h3>Deep Fake Detection</h3>
+                <p>
+                    A deep learning project that classifies images as real
+                    or fake using image features and visual representations.
+                </p>
+                <div class="tech">
+                    Python | CNN | ResNet18 | Vision Transformer
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Resume Upload Section -->
+    <section id="resume" class="resume-section">
+        <h2 class="heading">My <span>Resume</span></h2>
+
+        <div class="resume-card">
+            <div class="resume-icon">📄</div>
+
+            <h3>Upload Your Resume</h3>
+
+            <p>
+                Select your resume PDF to preview or download it.
+            </p>
+
+            <label for="resumeUpload" class="btn upload-btn">
+                Choose Resume PDF
+            </label>
+
+            <input type="file" id="resumeUpload"
+                   accept=".pdf,application/pdf" hidden>
+
+            <p id="resumeName" class="message">
+                No resume selected
+            </p>
+
+            <p id="resumeMessage" class="message"></p>
+
+            <div id="resumeActions" style="display:none;">
+                <a id="viewResume" class="btn"
+                   href="#" target="_blank" rel="noopener">
+                    View Resume
+                </a>
+
+                <a id="downloadResume" class="btn btn-outline"
+                   href="#" download>
+                    Download Resume
+                </a>
+            </div>
+
+            <iframe id="resumePreview"
+                    title="Resume PDF Preview"
+                    style="display:none;">
+            </iframe>
+        </div>
+    </section>
+
+    
+<!-- Contact Section -->
+<section id="contact">
+    <h2 class="heading">Contact <span>Me</span></h2>
+
+    <p class="contact-description">
+        I am interested in software development opportunities.
+        Feel free to connect with me!
+    </p>
+
+    <div class="contact-card">
+        <p>
+            <strong>Email:</strong>
+            <a href="mailto:anumalsettivenkatakousalya@gmail.com">
+                anumalsettivenkatakousalya@gmail.com
+            </a>
+        </p>
+
+        <p>
+            <strong>LinkedIn:</strong>
+            <a href="https://www.linkedin.com/in/anumalasetti-kousalya-venkata-sai-lakshmi-8490a5420/"
+               target="_blank" rel="noopener noreferrer">
+                My LinkedIn Profile
+            </a>
+        </p>
+
+        <p>
+            <strong>GitHub:</strong>
+            <a href="https://github.com/Kousalya2004-vt"
+               target="_blank" rel="noopener noreferrer">
+                My GitHub Profile
+            </a>
+        </p>
+    </div>
+</section>
+
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2026 Kousalya | Personal Portfolio</p>
+        <p>Designed with HTML, CSS and JavaScript</p>
+    </footer>
+
+    <!-- Upload Functionality -->
+    <script>
+        let photoURL = null;
+        let resumeURL = null;
+
+        // Profile Photo Upload
+        document.getElementById("photoUpload")
+            .addEventListener("change", function () {
+
+                const file = this.files[0];
+
+                if (!file) return;
+
+                if (!file.type.startsWith("image/")) {
+                    document.getElementById("photoMessage").textContent =
+                        "Please select a valid image.";
+                    this.value = "";
+                    return;
+                }
+
+                if (photoURL) {
+                    URL.revokeObjectURL(photoURL);
+                }
+
+                photoURL = URL.createObjectURL(file);
+
+                const photo = document.getElementById("profilePhoto");
+                photo.src = photoURL;
+                photo.style.display = "block";
+
+                document.getElementById("photoPlaceholder")
+                    .style.display = "none";
+
+                document.getElementById("photoMessage").textContent =
+                    "Photo selected successfully!";
+            });
+
+        // Resume PDF Upload
+        document.getElementById("resumeUpload")
+            .addEventListener("change", function () {
+
+                const file = this.files[0];
+
+                if (!file) return;
+
+                if (file.type !== "application/pdf" &&
+                    !file.name.toLowerCase().endsWith(".pdf")) {
+
+                    document.getElementById("resumeMessage").textContent =
+                        "Please select a PDF file.";
+
+                    this.value = "";
+                    return;
+                }
+
+                if (resumeURL) {
+                    URL.revokeObjectURL(resumeURL);
+                }
+
+                resumeURL = URL.createObjectURL(file);
+
+                document.getElementById("resumeName").textContent =
+                    "Selected: " + file.name;
+
+                document.getElementById("resumeMessage").textContent =
+                    "Resume selected successfully!";
+
+                document.getElementById("viewResume").href = resumeURL;
+
+                document.getElementById("downloadResume").href = resumeURL;
+                document.getElementById("downloadResume").download =
+                    file.name;
+
+                document.getElementById("resumeActions")
+                    .style.display = "block";
+
+                const preview = document.getElementById("resumePreview");
+                preview.src = resumeURL;
+                preview.style.display = "block";
+            });
+    </script>
+
+</body>
+</html>
