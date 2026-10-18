@@ -9,8 +9,9 @@
 
 body {
     font-family: Arial, sans-serif;
-    background: #f8f9ff;
-    color: #29253d;
+    background: linear-gradient(135deg, #dbeafe, #eff6ff, #e0f2fe);
+    background-attachment: fixed;
+    color: #16325c;
     line-height: 1.7;
 }
 
@@ -21,12 +22,13 @@ section {
 
 /* Navigation */
 header {
-    background: white;
+    background: rgba(255, 255, 255, 0.95);
     padding: 17px 7%;
     position: sticky;
     top: 0;
     z-index: 100;
-    box-shadow: 0 3px 15px rgba(60, 40, 100, 0.08);
+    box-shadow: 0 3px 15px rgba(0, 70, 140, 0.12);
+    backdrop-filter: blur(12px);
 }
 
 nav {
@@ -37,10 +39,9 @@ nav {
 }
 
 .logo {
-    color: #6d45f2;
+    color: #0756b5;
     font-size: 27px;
 }
-
 
 nav ul {
     display: flex;
@@ -51,14 +52,14 @@ nav ul {
 
 nav a {
     text-decoration: none;
-    color: #333047;
+    color: #16325c;
     font-size: 14px;
     font-weight: bold;
     transition: 0.3s;
 }
 
 nav a:hover {
-    color: #6941e8;
+    color: #00a6fb;
 }
 
 /* Home */
@@ -69,7 +70,8 @@ nav a:hover {
     justify-content: space-between;
     gap: 45px;
     padding: 60px 9%;
-    background: linear-gradient(120deg, #eee9ff, #fff, #fceeff);
+    background: linear-gradient(120deg, #023e8a, #0077b6, #48cae4);
+    color: white;
 }
 
 .hero-text {
@@ -78,7 +80,7 @@ nav a:hover {
 }
 
 .welcome {
-    color: #6941e8;
+    color: #caf0f8;
     font-size: 13px;
     font-weight: bold;
     letter-spacing: 2px;
@@ -89,21 +91,25 @@ nav a:hover {
     font-size: 46px;
     line-height: 1.3;
     margin-bottom: 10px;
+    color: white;
 }
 
-.hero h1 span,
+.hero h1 span {
+    color: #90e0ef;
+}
+
 .heading span {
-    color: #6941e8;
+    color: #0077b6;
 }
 
 .hero h2 {
     font-size: 23px;
-    color: #514a6b;
+    color: #e0f7ff;
     margin-bottom: 15px;
 }
 
 .hero-text > p:not(.welcome) {
-    color: #625e72;
+    color: #effaff;
     margin-bottom: 23px;
 }
 
@@ -112,9 +118,9 @@ nav a:hover {
     display: inline-block;
     padding: 10px 20px;
     margin: 5px 5px 5px 0;
-    background: #6941e8;
+    background: linear-gradient(135deg, #0077b6, #00b4d8);
     color: white;
-    border: 2px solid #6941e8;
+    border: 2px solid #00b4d8;
     border-radius: 7px;
     text-decoration: none;
     font-size: 14px;
@@ -124,19 +130,21 @@ nav a:hover {
 }
 
 .btn:hover {
-    background: #4e2dc1;
-    border-color: #4e2dc1;
+    background: #023e8a;
+    border-color: #023e8a;
     transform: translateY(-3px);
-    box-shadow: 0 5px 15px rgba(105, 65, 232, 0.2);
+    box-shadow: 0 5px 18px rgba(0, 119, 182, 0.3);
 }
 
 .btn-outline {
     background: transparent;
-    color: #6941e8;
+    color: white;
+    border-color: white;
 }
 
 .btn-outline:hover {
-    color: white;
+    color: #023e8a;
+    background: white;
 }
 
 /* Profile */
@@ -152,16 +160,17 @@ nav a:hover {
     width: 255px;
     height: 255px;
     border: 5px solid white;
-    outline: 3px solid #b9a5ff;
+    outline: 3px solid #48cae4;
     border-radius: 50%;
     overflow: hidden;
-    background: #eee9ff;
-    box-shadow: 0 10px 30px rgba(105, 65, 232, 0.2);
+    background: #caf0f8;
+    box-shadow: 0 0 30px rgba(72, 202, 228, 0.6);
     transition: 0.3s;
 }
 
 .photo-frame:hover {
     transform: scale(1.04);
+    box-shadow: 0 0 40px rgba(72, 202, 228, 0.8);
 }
 
 .photo-frame img {
@@ -177,7 +186,7 @@ nav a:hover {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    color: #6941e8;
+    color: #0756b5;
 }
 
 #photoPlaceholder span {
@@ -193,7 +202,7 @@ nav a:hover {
 }
 
 .message {
-    color: #6941e8;
+    color: #0077b6;
     font-size: 13px;
     overflow-wrap: anywhere;
     margin: 10px 0;
@@ -204,6 +213,7 @@ nav a:hover {
     text-align: center;
     font-size: 32px;
     margin-bottom: 30px;
+    color: #023e8a;
 }
 
 /* About */
@@ -212,15 +222,22 @@ nav a:hover {
     margin: auto;
     padding: 30px;
     text-align: center;
-    color: #625e72;
-    background: white;
-    border-radius: 12px;
-    box-shadow: 0 5px 20px rgba(50, 40, 90, 0.07);
+    color: #405775;
+    background: rgba(255, 255, 255, 0.9);
+    border: 1px solid #bfdbfe;
+    border-radius: 16px;
+    box-shadow: 0 8px 25px rgba(0, 70, 140, 0.10);
+    transition: 0.3s;
+}
+
+.about-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(0, 119, 182, 0.18);
 }
 
 /* Skills */
 .light-section {
-    background: #f0edff;
+    background: linear-gradient(135deg, #bfdbfe, #e0f2fe);
 }
 
 .skills-container {
@@ -233,17 +250,19 @@ nav a:hover {
 .skill {
     padding: 12px 22px;
     background: white;
-    color: #5140a6;
-    border-radius: 8px;
+    color: #0756b5;
+    border: 1px solid #bfdbfe;
+    border-radius: 10px;
     font-weight: bold;
-    box-shadow: 0 3px 12px rgba(80, 50, 150, 0.08);
+    box-shadow: 0 3px 12px rgba(0, 70, 140, 0.08);
     transition: 0.3s;
 }
 
 .skill:hover {
-    background: #6941e8;
+    background: linear-gradient(135deg, #0077b6, #00b4d8);
     color: white;
     transform: translateY(-5px);
+    box-shadow: 0 7px 18px rgba(0, 119, 182, 0.25);
 }
 
 /* Projects */
@@ -254,17 +273,19 @@ nav a:hover {
 }
 
 .project-card {
-    background: white;
+    background: rgba(255, 255, 255, 0.93);
     padding: 25px;
-    border-radius: 12px;
-    border-bottom: 4px solid #6941e8;
-    box-shadow: 0 5px 20px rgba(50, 40, 90, 0.07);
+    border-radius: 15px;
+    border: 1px solid #dbeafe;
+    border-bottom: 4px solid #00a6fb;
+    box-shadow: 0 5px 20px rgba(0, 70, 140, 0.08);
     transition: 0.3s;
 }
 
 .project-card:hover {
     transform: translateY(-7px);
-    box-shadow: 0 12px 28px rgba(105, 65, 232, 0.14);
+    box-shadow: 0 12px 28px rgba(0, 119, 182, 0.20);
+    border-bottom-color: #023e8a;
 }
 
 .project-icon {
@@ -273,17 +294,17 @@ nav a:hover {
 }
 
 .project-card h3 {
-    color: #6941e8;
+    color: #0756b5;
     margin-bottom: 12px;
 }
 
 .project-card p {
-    color: #625e72;
+    color: #405775;
     margin-bottom: 15px;
 }
 
 .tech {
-    color: #6941e8;
+    color: #0077b6;
     font-size: 13px;
     font-weight: bold;
 }
@@ -291,16 +312,17 @@ nav a:hover {
 /* Resume */
 .resume-section {
     text-align: center;
-    background: linear-gradient(120deg, #eee9ff, #fceeff);
+    background: linear-gradient(120deg, #90e0ef, #caf0f8);
 }
 
 .resume-card {
     max-width: 750px;
     margin: auto;
     padding: 30px;
-    background: white;
-    border-radius: 14px;
-    box-shadow: 0 5px 20px #e1dafb;
+    background: rgba(255, 255, 255, 0.95);
+    border: 1px solid #bfdbfe;
+    border-radius: 16px;
+    box-shadow: 0 8px 25px rgba(0, 70, 140, 0.12);
 }
 
 .resume-icon {
@@ -309,18 +331,19 @@ nav a:hover {
 
 .resume-card h3 {
     margin: 10px 0;
+    color: #0756b5;
 }
 
 .resume-card p {
     margin-bottom: 15px;
-    color: #625e72;
+    color: #405775;
 }
 
 #resumePreview {
     width: 100%;
     height: 500px;
     margin-top: 20px;
-    border: 1px solid #ddd;
+    border: 1px solid #bfdbfe;
     border-radius: 8px;
     background: white;
 }
@@ -328,7 +351,7 @@ nav a:hover {
 /* Contact */
 .contact-description {
     text-align: center;
-    color: #625e72;
+    color: #405775;
     margin-bottom: 25px;
 }
 
@@ -336,9 +359,16 @@ nav a:hover {
     max-width: 600px;
     margin: auto;
     padding: 25px;
-    background: white;
-    border-radius: 12px;
-    box-shadow: 0 5px 20px rgba(50, 40, 90, 0.07);
+    background: rgba(255, 255, 255, 0.93);
+    border: 1px solid #bfdbfe;
+    border-radius: 16px;
+    box-shadow: 0 8px 25px rgba(0, 70, 140, 0.10);
+    transition: 0.3s;
+}
+
+.contact-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(0, 119, 182, 0.18);
 }
 
 .contact-card p {
@@ -347,11 +377,12 @@ nav a:hover {
 }
 
 .contact-card a {
-    color: #6941e8;
+    color: #0077b6;
     text-decoration: none;
 }
 
 .contact-card a:hover {
+    color: #023e8a;
     text-decoration: underline;
 }
 
@@ -359,9 +390,10 @@ nav a:hover {
 footer {
     padding: 22px;
     text-align: center;
-    background: #25203c;
+    background: linear-gradient(135deg, #03045e, #023e8a, #0077b6);
     color: white;
     font-size: 14px;
+    border-top: 3px solid #48cae4;
 }
 
 /* Responsive */
